@@ -54,8 +54,12 @@ function addGrid(n) {
 
 function resetGrid() {
     var n = prompt("How large would you like to make the grid?");
-    container.empty();
-    addGrid(n);
+    if(n > 0) {
+        container.empty();
+        addGrid(n);
+    } else {
+        alert("Please enter a valid number");
+    }
 }
 
 function resetGridSingle() {
